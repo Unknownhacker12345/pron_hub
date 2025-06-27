@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Push Site</title>
+  <!-- OneSignal SDK script -->
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "946e0939-16f5-4d3e-b5e9-1d80d623c24d", // <-- Replace with your real OneSignal App ID
+        notifyButton: {
+          enable: true  // Shows a small bell icon for subscription
+        }
+      });
+    });
+  </script>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      text-align: center; 
+      margin-top: 10vh; 
+    }
+    button { 
+      padding: 10px 20px; 
+      font-size: 16px; 
+      cursor: pointer; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Push Site</h1>
+  <p>Click the button below to subscribe for updates!</p>
+  <button onclick="OneSignal.showNativePrompt()">Subscribe</button>
+</body>
+</html>
